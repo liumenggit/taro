@@ -13,5 +13,7 @@ Route::group([
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index');
-
+    $router->resource('subject', 'SubjectController');
+    $router->resource('paper', 'ExamPaperController');
+    $router->resource('question', 'QuestionController');
 });
